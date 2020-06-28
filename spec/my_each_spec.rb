@@ -48,15 +48,7 @@ describe "my_each" do
     expect(saved_block).to_not raise_error
   end
 
-  it "returned array contains the same elements as the original collection" do
-    tas = ['arel', 'jon', 'logan', 'spencer']
-
-    # run the method
-    expect(my_each(tas) do |ta|
-    # Do nothing on yield
-    # check if it returns correct values
-    end).to contain_exactly('arel', 'jon', 'logan', 'spencer')
-  end
+  
 
   it "does not modify the original collection" do
     tas = ['arel', 'jon', 'logan', 'spencer']
